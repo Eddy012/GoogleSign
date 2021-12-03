@@ -25,7 +25,7 @@
     
 </div>  
 
-
+<button onclick="signOut()">Sign Out</button>
 
 
 <script language = "javascript">
@@ -35,6 +35,13 @@
   console.log('Name: ' + profile.getName());
   console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
 }
+
+
+  function signOut(){
+    gapi.auth2.getAuthInstance().signOut().then(function() {
+      console.log('user signed out')
+    })
+  }
 </script>
   
 
