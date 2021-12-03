@@ -21,9 +21,18 @@
 </form>
 
 
-<div class = "g-signin2">
+<div class = "g-signin2" data-onsuccess="onSignIn">
     
 </div>  
+
+
+<script language = "javascript">
+    function onSignIn(googleUser) {
+        console.log('User is ' + JSON.stringify(googleUser.getBasicProfile()))
+    }
+
+</script>
+  
 
 
 
